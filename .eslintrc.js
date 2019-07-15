@@ -19,5 +19,9 @@ module.exports = {
   rules: {
     'import/no-unresolved': 'off',
     'no-undef': 'off',
+    'no-shadow': 'off',
+    'no-param-reassign': ['error', { props: true, ignorePropertyModificationsFor: ['state'] }],
+    'import/no-extraneous-dependencies': 'off',
+
   },
 }
