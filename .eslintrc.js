@@ -17,5 +17,7 @@ module.exports = {
   ],
   // add your custom rules here
   rules: {
+    'import/no-unresolved': 'off',
+    'no-undef': 'off',
   },
 }
