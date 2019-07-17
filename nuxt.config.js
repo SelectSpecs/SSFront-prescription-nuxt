@@ -36,6 +36,7 @@ export default {
   modules: [
     '@nuxtjs/pwa',
     '@nuxtjs/eslint-module',
+    '@nuxtjs/axios',
   ],
   /*
    ** Axios module configuration

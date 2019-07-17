@@ -1,7 +1,3 @@
-// import apiUrls from '~/constants/api';
-import { put } from '~/helpers/api/api';
-import { deleteParams } from '~/helpers/api/axios';
-
 export const state = () => ({
   user: null,
 });
@@ -32,7 +28,7 @@ export const actions = {
   // },
 
   async exit({ commit }) {
-    deleteParams('Authorization');
+    this.$axios.setToken(false);
     commit('SET_USER', null);
   },
 
@@ -43,7 +39,7 @@ export const actions = {
         ...dataObj,
       },
     };
-    const { data, status } = await put(`https://yii.omnismain.com/rest/users/${state.user.user_number}`, obj);
+    const { data, status } = await this.$axios.put(`https://yii.omnismain.com/rest/users/${state.user.user_number}`, obj);
     if (status) {
       commit('SET_USER', data);
     }

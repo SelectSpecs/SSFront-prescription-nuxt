@@ -11,9 +11,6 @@ export default {
   components: {
     user,
   },
-  // async fetch({ store }) {
-  //   await store.dispatch('user/fetch');
-  // },
 };
 </script>
 
